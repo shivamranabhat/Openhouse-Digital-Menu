@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="top-section bg-white z-1 fixed top-0 w-full px-4 py-4 md:px-10 py-8 flex flex-col gap-y-4">
+        <header class="flex justify-between items-center">
+            <img src="./assets/images/logo.png" class="w-36" alt="Logo">
+            <img src="./assets/images/Menu.svg" alt="menu">
+        </header>
+    </div>
+    <div class="login mt-20 mb-14 md:mb-0 md:mt-[6rem] pt-20 pb-14 md:pb-28 md:pt-10 px-4 flex justify-center">
+            <div class="container mx-auto flex flex-col gap-y-4 md:gap-y-8 w-full md:w-[80%] lg:w-[60%]">
+                <div class="title flex flex-col gap-y-2">
+                    <h2 class="text-2xl md:text-4xl font-bold">Login</h2>
+                    <p class="text-sm md:text-base text-gray-700">Enter your details to log in to your account.</p>
+                </div>
+                <div class="h-px bg-gray-300 mb-2 md:mb-4"></div>
+                <form class="col-span-2 flex flex-col gap-6">
+                    <div class="input-field flex flex-col gap-2">
+                        <label for="email" class="text-sm">Email </label>
+                        <input
+                            class="p-3 md:p-4 w-full placeholder:text-stone-500 placeholder:text-sm border border-gray-300 outline-none focus:outline-none focus:ring-0 focus:border-gray-400 focus:ease-in-out "
+                            type="email" wire:model="email" placeholder="someone@gmail.com" readonly="">
+                    </div>
+                    <div class="input-field flex flex-col gap-2">
+                        <label for="password" class="text-sm">Password </label>
+                        <input
+                            class="p-3 md:p-4 w-full placeholder:text-stone-500 placeholder:text-sm border border-gray-300 outline-none focus:outline-none focus:ring-0 focus:border-gray-400 focus:ease-in-out "
+                            type="password" wire:model="password" placeholder="******">
+                        <div class="flex justify-between">
+                            <div class="remember flex gap-2 items-center">
+                                <input type="checkbox" wire:model="remember" class="rounded">
+                                <label for="remember_me" class="text-sm text-stone-600">Remember me</label>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="font-semibold flex items-center justify-center bg-[#023315] text-white px-4 md:px-6 py-2 md:py-3 hover:bg-[#025421] hover:ease-in-out duration-300 transition-all">
+                       Login
+                    </button>
+                </form>
+                
+            </div>
+    </div>
+    <div
+        class="bottom-section fixed bottom-0 w-full md:w-1/2 left-0 right-0 mx-auto bg-[#023315] rounded-t-3xl px-6 py-2 flex items-center justify-between">
+        <a href="#"><img src="./assets/images/call.svg" class="cursor-pointer" alt="Call"></a>
+        <button><img src="./assets/images/dashboard.svg" alt=""></button>
+        <div class="bg-white rounded-full p-2" class="cursor-pointer">
+            <img src="./assets/images/Favorites.svg" alt="">
+        </div>
+        <img src="./assets/images/map.svg" class="cursor-pointer" alt="">
+        <a href="#"><img src="./assets/images/back.svg" class="cursor-pointer" alt=""></a>
+    </div>
+</body>
+
+</html>
